@@ -1,0 +1,24 @@
+{
+  "groceries": [
+    {
+      "item": "brinjal",
+      "purchased": "false",
+      "id": 1
+    },
+    {
+      "item": "tomato",
+      "purchased": "false",
+      "id": 2
+    },
+    {
+      "item": "sorakaya",
+      "purchased": "false",
+      "id": 3
+    },
+    {
+      "item": "mutton",
+      "purchased": "false",
+      "id": 5
+    }
+  ]
+}
