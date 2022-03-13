@@ -8,11 +8,11 @@
       "id": 1
     },
     {
-      "name": "nikhil",
+      "name": "jeevan",
       "age": "23",
-      "department": "civi",
+      "department": "mechanical",
       "gender": "male",
-      "id": 4
+      "id": 2
     }
   ]
 }
