@@ -18,10 +18,17 @@ export const FormInput = () => {
   //to get data from the database and render to the DOM
   const [getdatabaseData, setdatabaseData] = useState([]);
 
+  //To give Pagenation
+  const [page, setPage] = useState(1);
+
   //useEffect to call the getdata function
   useEffect(() => {
     getData();
-  }, []);
+
+    // return () => {
+    //   console.log("Unmounted");
+    // };
+  }, [page]);
 
   //input - spreading data - gender - setformdata
   const handlechange = (e) => {
@@ -47,22 +54,32 @@ export const FormInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3005/usersData", formData, getData());
+    axios.post("http://localhost:3005/usersData", formData).then(() => {
+      alert("User Registered Successfully");
+      getData();
+    });
   };
 
   //getData from the database
   const getData = () => {
-    axios.get("http://localhost:3005/usersData").then((res) => {
-      setdatabaseData(res.data);
-    });
+    axios
+      .get(`http://localhost:3005/usersData?_limit=2&_page=${page}`)
+      .then((res) => {
+        setdatabaseData(res.data);
+      });
   };
 
   //delete-function
 
   function Delete(data) {
-    axios.delete(`http://localhost:3005/usersData/${data.id}`);
-    getData();
+    axios.delete(`http://localhost:3005/usersData/${data.id}`).then(() => {
+      getData();
+    });
   }
+
+  //Localstoarge
+
+  // localStorage.setItem("userData", )
 
   return (
     <>
@@ -88,7 +105,7 @@ export const FormInput = () => {
           Select Department:{" "}
           <select name="" id="department" onChange={handlechange}>
             <option value="department">Department</option>
-            <option value="civi">Civil</option>
+            <option value="civil">Civil</option>
             <option value="mechanical">Mechanical</option>
             <option value="electrical">Electrical</option>
           </select>
@@ -106,6 +123,23 @@ export const FormInput = () => {
 
       <div>
         <Appenddata getdatabaseData={getdatabaseData} Delete={Delete} />
+      </div>
+
+      <div className="pagination">
+        <button
+          onClick={() => {
+            setPage(page - 1);
+          }}
+        >
+          Prev
+        </button>{" "}
+        <button
+          onClick={() => {
+            setPage(page + 1);
+          }}
+        >
+          Next
+        </button>
       </div>
     </>
   );

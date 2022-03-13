@@ -6,6 +6,13 @@
       "department": "mechanical",
       "gender": "male",
       "id": 1
+    },
+    {
+      "name": "nikhil",
+      "age": "23",
+      "department": "civi",
+      "gender": "male",
+      "id": 4
     }
   ]
 }

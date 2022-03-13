@@ -14,5 +14,9 @@ td {
 .users-data {
   text-align: center;
 
- margin-left: 35%;
+  margin-left: 35%;
+}
+
+.pagination {
+  margin-top: 25px;
 }
