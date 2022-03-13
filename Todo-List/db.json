@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "todo": "work react",
+      "id": 1647148480383,
+      "status": false
+    },
+    {
+      "todo": "work on dsa",
+      "id": 1647149121205,
+      "status": false
+    },
+    {
+      "todo": "work on gym",
+      "id": 1647149130869,
+      "status": false
+    },
+    {
+      "todo": "go to walk",
+      "id": 1647149162116,
+      "status": false
+    },
+    {
+      "todo": "got to market",
+      "id": 1647149169836,
+      "status": false
+    },
+    {
+      "todo": "wake up in the morning",
+      "id": 1647149182424,
+      "status": false
+    }
+  ]
+}
