@@ -1,18 +1,81 @@
 {
   "usersData": [
     {
-      "name": "jeevan",
+      "name": "divya",
       "age": "23",
+      "department": "civil",
+      "gender": "female",
+      "id": 2
+    },
+    {
+      "name": "shravya",
+      "age": "23",
+      "department": "electrical",
+      "gender": "female",
+      "id": 3
+    },
+    {
+      "name": "xyx",
+      "age": "22",
       "department": "mechanical",
       "gender": "male",
-      "id": 1
+      "id": 4
+    },
+    {
+      "name": "shravya",
+      "age": "22",
+      "department": "civil",
+      "gender": "",
+      "id": 5
+    },
+    {
+      "name": "shravya",
+      "age": "22",
+      "department": "civil",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "name": "xyz",
+      "age": "21",
+      "department": "civil",
+      "gender": "female",
+      "id": 7
     },
     {
       "name": "jeevan",
       "age": "23",
+      "department": "civil",
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "name": "jeevan",
+      "age": "23",
+      "department": "civil",
+      "gender": "male",
+      "id": 9
+    },
+    {
+      "name": "asa",
+      "age": "23",
+      "department": "civil",
+      "gender": "male",
+      "id": 10
+    },
+    {
+      "name": "a",
+      "age": "12",
+      "department": "civil",
+      "gender": "male",
+      "id": 11
+    },
+    {
+      "name": "jeevan",
+      "age": "24",
       "department": "mechanical",
       "gender": "male",
-      "id": 2
+      "id": 12
     }
   ]
 }

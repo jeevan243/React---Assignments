@@ -5,15 +5,20 @@ import { Appenddata } from "./formdata";
 
 export const FormInput = () => {
   //object
-  const obj = {
+  // const obj = {
+  //   name: "",
+  //   age: "",
+  //   department: "",
+  //   gender: "",
+  // };
+
+  //state for to fill the data and to post on the server
+  const [formData, setFormdata] = useState({
     name: "",
     age: "",
     department: "",
     gender: "",
-  };
-
-  //state for to fill the data and to post on the server
-  const [formData, setFormdata] = useState(obj);
+  });
 
   //to get data from the database and render to the DOM
   const [getdatabaseData, setdatabaseData] = useState([]);
@@ -57,9 +62,9 @@ export const FormInput = () => {
     axios.post("http://localhost:3005/usersData", formData).then(() => {
       alert("User Registered Successfully");
       getData();
+      setFormdata({ name: "", age: "", department: "", gender: "" });
     });
   };
-
   //getData from the database
   const getData = () => {
     axios
@@ -90,20 +95,27 @@ export const FormInput = () => {
           <input
             type="text"
             id="name"
+            value={formData.name}
             placeholder="Type name here"
             onChange={handlechange}
           />{" "}
           Age:{" "}
           <input
-            type="text"
+            type="number"
             id="age"
+            value={formData.age}
             placeholder="Type age here"
             onChange={handlechange}
           />
           <br />
           <br />
           Select Department:{" "}
-          <select name="" id="department" onChange={handlechange}>
+          <select
+            name=""
+            id="department"
+            value={formData.department}
+            onChange={handlechange}
+          >
             <option value="department">Department</option>
             <option value="civil">Civil</option>
             <option value="mechanical">Mechanical</option>
@@ -113,9 +125,20 @@ export const FormInput = () => {
           <br />
           Gender:
           <label>Male</label>
-          <input type="checkbox" id="male" onChange={handlechange} />{" "}
+          <input
+            type="checkbox"
+            value={formData.gender}
+            id="male"
+            onChange={handlechange}
+          />{" "}
           <label>women</label>
-          <input type="checkbox" id="female" onChange={handlechange} /> <br />
+          <input
+            type="checkbox"
+            value={formData.gender}
+            id="female"
+            onChange={handlechange}
+          />{" "}
+          <br />
           <br />
           <input type="submit" />
         </form>
